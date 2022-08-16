@@ -39,7 +39,7 @@ input{
         </style>
 </head>
 <body style="background-color: rgb(226, 226, 226);">
-    {% csrf_token %}
+    
     
     <center><h1 style="color: rgb(255, 252, 88); fill: aqua;">Please Enter your details</h1></center>    
     
@@ -48,6 +48,7 @@ input{
         <a href="https://p4piyush.herokuapp.com/admin" target="_self">ADMIN</a></br>
     </div >
         <form action="/save_user/" method="POST" >
+            {% csrf_token %}
         <p style="display: inline;">Enter Your Name:</p> <input type="text" name="name" id="name">
         </br>
         <input type="submit" value="Submit">
