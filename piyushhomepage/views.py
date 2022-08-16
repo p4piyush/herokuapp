@@ -17,6 +17,8 @@ def save_user_info(req):
             msg='User record saved...'
     return render(req,template_name='add_user.html', context={"msg":msg})
 
-def show_new_page(req):
+def show_users(req):
     msg=''
-    return render(req, template_name='new_page.html')
+    userlist= Userinfo.objects.all()
+
+    return render(req, template_name='show_user_record.html', context={"userdata":userlist})

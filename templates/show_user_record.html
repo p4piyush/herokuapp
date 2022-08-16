@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER DB </title>
+</head>
+<body style="background-color: yellow;">
+    <h1>User List from HerokuPostgres DB:</h1></br>
+    <table border="1">
+    <thead>
+        <th>Sr No.</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        {% for user in userdata %}
+        <tr>
+            <td>user.id</td>    
+            <td>user.name</td>
+        </tr>
+    </tbody>
+
+    </table>
+
+
+
+
+
+<h3></h3>
+<h2 style="color: rgb(255, 250, 106);">©Piyush</h2>
+</body>
+</html>

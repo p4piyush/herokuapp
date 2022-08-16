@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index_page),
     path('save_user/',save_user_info),
-    path('new_page/',show_new_page),
+    path('show_users/',show_users),
 ]
