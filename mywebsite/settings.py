@@ -31,7 +31,7 @@ env=environ.Env(SECRET_KEY=str), environ.Env.read_env(os.path.join(BASE_DIR,'.en
 SECRET_KEY = 'django-insecure-57jo*e)+8ym8f34zf^l1s05utrw=+h+_o*p%a4$%a+c4a#yol8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','p4piyush.herokuapp.com']
 
