@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 
 DATABASES = {
     'default': {        #primary database -- there has to be atleast one db -- default
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pydjango',
-        'HOST' : 'p4piyush.mysql.pythonanywhere-services.com',
-        'PORT' : 3306,
-        'USER' : 'p4piyush',
-        'PASSWORD':'piyush0000'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd85grgtpi7jk21',
+        'HOST' : 'ec2-44-195-100-240.compute-1.amazonaws.com',
+        'PORT' : 5432,
+        'USER' : 'suivmyiouczvwq',
+        'PASSWORD':'3da1b76bc88791b02cff66d51457728035bba1799153e61db905990874aca28f'
     },
     'SQLT': {
             'ENGINE': 'django.db.backends.sqlite3',
