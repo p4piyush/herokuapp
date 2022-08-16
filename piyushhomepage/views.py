@@ -16,3 +16,7 @@ def save_user_info(req):
             userinf.save()
             msg='User record saved...'
     return render(req,template_name='add_user.html', context={"msg":msg})
+
+def show_new_page(req):
+    msg=''
+    return render(req, template_name='new_page.html',context={})
