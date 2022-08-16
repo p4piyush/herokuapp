@@ -39,6 +39,7 @@ input{
         </style>
 </head>
 <body style="background-color: rgb(226, 226, 226);">
+    {% msg as msg1 %}
     <center><h1 style="color: rgb(255, 252, 88); fill: aqua;">Please Enter your details</h1></center>    
     
     <div style="display: inline;">
@@ -50,7 +51,7 @@ input{
         </br>
         <input type="submit" value="Submit">
     </form>
-    <h3>{% msg %}</h3>
+    <h3>{{ msg1 }}</h3>
 
     <div>
 
