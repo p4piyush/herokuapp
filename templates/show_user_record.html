@@ -5,10 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USER DB </title>
+
+    <style>
+        body {
+          background-image: url('https://unsplash.com/photos/dQDDMWgvotg/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjYwNjAyMTk0&force=true');
+          background-repeat: no-repeat;
+          background-attachment: fixed;  
+          background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            }
+
+        a:link, a:visited {
+                            background-color: #f44336;
+                            color: white;
+                            padding: 14px 25px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            }
+
+a:hover, a:active {
+                    background-color: rgb(119, 0, 255);
+}
+
+#userinfo1 {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #userinfo1 td, #userinfo1 th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #userinfo1 tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #userinfo1 tr:hover {background-color: #ddd;}
+    
+    #userinfo1 th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+
+
+        </style>
+
 </head>
-<body style="background-color: yellow;">
-    <h1>User List from HerokuPostgres DB:</h1></br>
-    <table border="1">
+<body style="background-color: rgb(246, 246, 239);">
+
+    <h1 style="color: rgb(228, 202, 69);">User List from HerokuPostgres DB:</h1></br>
+<div style="display: inline;">
+        <a href="https://p4piyush.herokuapp.com/" target="_self">HOME</a>
+        <a href="https://p4piyush.herokuapp.com/admin" target="_self">ADMIN</a>
+        <a href="https://p4piyush.herokuapp.com/save_user" target="_self">REGISTER</a>
+        
+    </div> 
+
+
+    <table border="1" id="userinfo1">
     <thead>
         <th>Sr No.</th>
         <th>Name</th>
@@ -16,8 +77,8 @@
     <tbody>
         {% for user in userdata %}
         <tr>
-            <td>user.id</td>    
-            <td>user.name</td>
+            <td>{{user.id}}</td>    
+            <td>{{user.name}}</td>
         </tr>
         {% endfor %}
     </tbody>
