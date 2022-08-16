@@ -19,4 +19,4 @@ def save_user_info(req):
 
 def show_new_page(req):
     msg=''
-    return render(req, template_name='new_page.html',context={})
+    return render(req, template_name='new_page.html')
