@@ -25,17 +25,37 @@
                             }
 
 a:hover, a:active {
-                    background-color: rgb(119, 0, 255);
+                    background-color: rgb(98, 0, 255);
+}
+p:hover, p:active{
+    background-color: #2614ee;
+}
+p{
+    color: greenyellow;
+}
+input{
+    color: rgb(21, 21, 21);
 }
         </style>
 </head>
 <body style="background-color: rgb(226, 226, 226);">
-    <center><h1 style="color: rgb(255, 252, 88); fill: aqua;">Welcome to my website</br>Hosted on HEROKU</h1></center>    
+    <center><h1 style="color: rgb(255, 252, 88); fill: aqua;">Please Enter your details</h1></center>    
     
-        <div style="display: inline;">
-        <a href="https://p4piyush.herokuapp.com/admin" target="_self">DJANGO-ADMIN</a>
-        <a href="https://p4piyush.herokuapp.com/save_user" target="_self">REGISTER</a>
-    </div> 
-        <h2 style="color: rgb(255, 250, 106);">©Piyush</h2>
+    <div style="display: inline;">
+        <a href="https://p4piyush.herokuapp.com/" target="_self">HOME</a>
+        <a href="https://p4piyush.herokuapp.com/admin" target="_self">ADMIN</a></br>
+    </div >
+        <form action="/save_user/" method="POST" >
+        <p style="display: inline;">Enter Your Name:</p> <input type="text" name="name" id="name">
+        </br>
+        <input type="submit" value="Submit">
+    </form>
+    <h3>{% msg %}</h3>
+
+    <div>
+
+
+    </div>
+<h2 style="color: rgb(255, 250, 106);">©Piyush</h2>
 
 </body>

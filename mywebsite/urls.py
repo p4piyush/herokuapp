@@ -19,5 +19,7 @@ from piyushhomepage.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index_page)
+    path('',index_page),
+    path('save_user/',save_user_info),
+    
 ]
