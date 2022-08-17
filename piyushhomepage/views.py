@@ -14,11 +14,17 @@ def save_user_info(req):
     try:
         if req.method=='POST':
             formdata = req.POST
+            print(formdata.get('fname'))
 
             if formdata:
-                userinf=Userinfo(name=formdata.get('name'))
-                userinf.save()
-                msg='User record saved...'
+                if formdata.get('fname')=="" or formdata.get('lname')=="" or formdata.get('email')=="" or formdata.get('gender')=="selectgender":
+                    msg="Enter all details properly"
+                    return render(req,template_name='add_user.html', context={"errormsg":msg})
+                else:    
+                    userinf=Userinfo(fname=formdata.get('fname'), lname=formdata.get('lname'), email=formdata.get('email'), gender=formdata.get('gender'))
+                    
+                    userinf.save()
+                    msg='THANK YOU FOR REGISTRSTION'
         return render(req,template_name='add_user.html', context={"msg":msg})
     except:
         msg='SERVER SIDE ERROR'
@@ -29,8 +35,18 @@ def save_user_info(req):
 def show_users(req):
     msg=''
     try:
-        userlist= Userinfo.objects.all()
-
+        userlist= Userinfo.objects.values_list('id','fname','lname')
+        #print(userlist)
+        """
+        HTML CODE TO PRINT DJANGO QUERY SET
+        {% for user in userdata %}
+            <tr>
+                {% for u in user %}
+                <td>{{u}}</td>    
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        """
         return render(req, template_name='show_user_record.html', context={"userdata":userlist})
     except:
         msg="SERVER SIDE ERROR"

@@ -99,6 +99,13 @@ DATABASES = {
         'PORT' : 5432,
         'USER' : 'suivmyiouczvwq',
         'PASSWORD':'3da1b76bc88791b02cff66d51457728035bba1799153e61db905990874aca28f'
+        
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'herokudb',
+        #'HOST' : 'localhost',
+        #'PORT' : 3306,
+        #'USER' : 'root',
+       # 'PASSWORD':'1234',
     },
     'SQLT': {
             'ENGINE': 'django.db.backends.sqlite3',

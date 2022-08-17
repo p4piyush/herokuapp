@@ -34,14 +34,22 @@
         }
         p{
             color: #f44336;
+            font-size:15pt;
+            width: auto
+            ;
         }
         input{
             color: rgb(21, 21, 21);
-            padding: 6px 50px;
-            font-size: larger;
-            color: #2614ee; 
+            padding: 3px 50px ;
+            padding-left: 5%;
+            font-size: larger; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
         }
+        .center {
+                margin-left: 5%;
+               
+                }
         </style>
 
 </head>
@@ -61,15 +69,51 @@
     </br>    
     </br>    
 
-        <h2 style="color: rgb(247, 130, 35);">Please Enter your details</h2>
-        <form action="/save_user/" method="POST" >
+        
+        <form action="/save_user/" method="post">
             {% csrf_token %}
-            <p style="display: inline; font-size: larger;">Enter Your Name:</p> <input type="text" name="name" id="name" >
-           
+
+            <table class="center">
+                <tr><td colspan="2"><h2 style="color: rgb(247, 130, 35);">PLEASE ENTER YOUR DETAILS</h2></td></tr>
+                <tr>
+                    <td ><p >Enter First Name</p></td>
+                    <td><input type="text" name="fname"  ></td>
+                </tr> 
+                <tr>
+                    <td><p >Enter Last Name:</p></td>
+                    <td><input type="text" name="lname"  ></td>
+                </tr> 
+                <tr>
+                    <td><p >Enter Email Address:</p></td>
+                    <td><input type="text" name="email"  ></td>
+                </tr>
+                <tr>
+                    <td><p >Select Gender:</p></td>
+                    <td>
+                        <select name="gender" style="padding: 6px 30px ; font-size: 15pt;">
+                        <option value="selectgender">select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <input type="submit" value="Submit" style="padding: 6px 10px;">
+                        <input type="reset" value="Reset" style="padding: 6px 10px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h3 style="color: rgb(247, 35, 35);">{{ errormsg }}</h3></td>
+                </tr>
+
             
             
-        </br></br>
-            <input type="submit" value="Submit" style="padding: 6px 10px;">
+            </table>
+
         </form>
 
     <h3 style="color: rgb(247, 130, 35);">{{ msg }}</h3>
