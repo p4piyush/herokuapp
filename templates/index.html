@@ -28,29 +28,18 @@ a:hover, a:active {
                     background-color: rgb(119, 0, 255);
 }
         </style>
-        <script type="text/javascript" src="https://testpages.herokuapp.com/styled/countdown.js"></script>
-        <script type="text/javascript">
-            function gotoRedirect(){
-                window.location = "redirected.html"
-            }
-            function startRedirection(millis){
-                document.getElementById("countdown-render").style.display="block";
-                var javascript_countdown = new CountDown();
-                javascript_countdown.setTimeoutMessage("Redirecting Now")
-                javascript_countdown.start(millis/1000);
-                setTimeout('gotoRedirect()', millis);
-            }
-        </script>
+       
 </head>
 <body style="background-color: rgb(226, 226, 226);">
-    <center><h1 style="color: rgb(255, 252, 88); fill: aqua;">Welcome to my website</br>Hosted on HEROKU</h1></center>    
+    <center><h1 style="color: #f44336; fill: aqua;">Welcome to my website</br>Hosted on HEROKU</h1></center>    
     
         <div style="display: inline;">
-        <a href="https://p4piyush.herokuapp.com/admin" target="_self">DJANGO-ADMIN</a>
+        
         <a href="https://p4piyush.herokuapp.com/save_user" target="_self">REGISTER</a>
         <a href="https://p4piyush.herokuapp.com/show_users" target="_self">SHOW-USERS</a>
+        <a href="https://p4piyush.herokuapp.com/admin" target="_self">DJANGO-ADMIN</a>
         <a href="https://p4piyush.herokuapp.com/show_image" target="_self" >SHOW-IMAGE</a>
-        <button class="styled-click-button" id="delaygotobounce" onclick="startRedirection(2000)">Click to be transported in 2 seconds</button>
+       
     </div> 
         <h2 style="color: rgb(255, 250, 106);">©Piyush</h2>
 
