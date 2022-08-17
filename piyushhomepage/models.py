@@ -10,7 +10,7 @@ class Userinfo(models.Model):
 
 
     class Meta:
-        db_table="User_master"
+        db_table="User_master2"
 
     def __str__(self):
         return f'''{self.__dict__}'''
