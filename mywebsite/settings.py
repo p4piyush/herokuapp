@@ -19,6 +19,10 @@ import django_heroku
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMP_DIR = os.path.join(BASE_DIR, 'templates')
 env=environ.Env(SECRET_KEY=str), environ.Env.read_env(os.path.join(BASE_DIR,'.env'))
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)) #
+PROJECT_DIR = os.path.join(PROJECT_ROOT,'../p4piyush')#
+STATIC_ROOT= os.path.join(PROJECT_DIR,'staticfiles/')#
+STATICFILES_DIRS = (os.path.join(PROJECT_ROOT,'static/'),)#
 
 
 #PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
