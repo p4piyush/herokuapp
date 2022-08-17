@@ -5,6 +5,9 @@ from django.db import models
 
 class Userinfo(models.Model):
     name=models.CharField(max_length=30)
+    gender=models.CharField(max_length=10)
+
+
 
     class Meta:
         db_table="User_master"
