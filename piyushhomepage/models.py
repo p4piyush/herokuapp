@@ -5,12 +5,12 @@ from django.db import models
 
 class Userinfo(models.Model):
     name=models.CharField(max_length=30)
-    gender=models.CharField(max_length=10)
+    #gender=models.CharField(max_length=10)
 
 
 
     class Meta:
-        db_table="User_master2"
+        db_table="User_master"
 
     def __str__(self):
         return f'''{self.__dict__}'''

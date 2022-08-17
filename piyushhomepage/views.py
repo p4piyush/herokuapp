@@ -16,7 +16,7 @@ def save_user_info(req):
             formdata = req.POST
 
             if formdata:
-                userinf=Userinfo(name=formdata.get('name'), gender=formdata.get('gender'))
+                userinf=Userinfo(name=formdata.get('name'))
                 userinf.save()
                 msg='User record saved...'
         return render(req,template_name='add_user.html', context={"msg":msg})
