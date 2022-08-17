@@ -35,7 +35,7 @@ def save_user_info(req):
 def show_users(req):
     msg=''
     try:
-        userlist= Userinfo.objects.values_list('id','fname','lname')
+        userlist= Userinfo.objects.values_list('id','fname','lname','gender')
         #print(userlist)
         """
         HTML CODE TO PRINT DJANGO QUERY SET
