@@ -22,3 +22,8 @@ def show_users(req):
     userlist= Userinfo.objects.all()
 
     return render(req, template_name='show_user_record.html', context={"userdata":userlist})
+
+def show_image(req):
+    msg=''
+    return render(req,template_name='showimage.html')
+    
