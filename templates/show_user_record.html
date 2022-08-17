@@ -7,84 +7,87 @@
     <title>USER DB </title>
 
     <style>
-        body {
-          background-image: url('https://p4piyush.herokuapp.com/static/bg1.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;  
-          background-size: cover;
-        }
-
-        h1 {
-            text-align: center;
+            body {
+            background-image: url('https://p4piyush.herokuapp.com/static/bg1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
             }
 
-        a:link, a:visited {
-                            background-color: #f44336;
-                            color: white;
-                            padding: 14px 25px;
-                            text-align: center;
-                            text-decoration: none;
-                            display: inline-block;
-                            }
+            h1 {
+                text-align: center;
+                }
 
-a:hover, a:active {
-                    background-color: rgb(119, 0, 255);
-}
+            a:link, a:visited {
+                                background-color: #f44336;
+                                color: white;
+                                padding: 14px 25px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                }
 
-#userinfo1 {
-      font-family: Arial, Helvetica, sans-serif;
-      border-collapse: collapse;
-      width: 50%;
-    }
-    
-    #userinfo1 td, #userinfo1 th {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-    
-    #userinfo1 tr:nth-child(even){background-color: #f9d211;}
-    #userinfo1 tr:nth-child(odd){background-color: #11f934;}
-    
-    #userinfo1 tr:hover {background-color: rgb(255, 202, 202);}
-    
-    #userinfo1 th {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: left;
-      background-color: #0452aa;
-      color: white;
-    }
+            a:hover, a:active {
+                        background-color: rgb(119, 0, 255);
+                                }
+
+            #userinfo1 {
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 50%;
+                }
+        
+            #userinfo1 td, #userinfo1 th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            }
+        
+            #userinfo1 tr:nth-child(even){background-color: #11c3f9;}
+            #userinfo1 tr:nth-child(odd){background-color: #5e91ef;}
+            
+            #userinfo1 tr:hover {background-color: #f44336;}
+            
+            #userinfo1 th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0452aa;
+            color: white;
+            }
+    </style>
 
 
-        </style>
+
+
 
 </head>
 <body style="background-color: rgb(246, 246, 239);">
 
     <h1 style="color: #f44336;">User List from HerokuPostgres DB:</h1></br>
-<div style="display: inline;">
+
+    <div style="display: inline;">
+
         <a href="https://p4piyush.herokuapp.com/" target="_self">HOME</a>
         <a href="https://p4piyush.herokuapp.com/save_user" target="_self" >REGISTER</a>
         <a href="https://p4piyush.herokuapp.com/admin" target="_self">ADMIN</a>
-        
-        
+           
     </div> 
 
 
     <table border="1" id="userinfo1">
-    <thead>
-        <th>Sr No.</th>
-        <th>Name</th>
-    </thead>
-    <tbody>
-        {% for user in userdata %}
-        <tr>
-            <td>{{user.id}}</td>    
-            <td>{{user.name}}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
+        <thead>
+            <th>Sr No.</th>
+            <th>Name</th>
+        </thead>
 
+        <tbody>
+            {% for user in userdata %}
+            <tr>
+                <td>{{user.id}}</td>    
+                <td>{{user.name}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
 
 
@@ -92,7 +95,8 @@ a:hover, a:active {
 
 
 
-<h3></h3>
-<h2 style="color: rgb(255, 250, 106);">©Piyush</h2>
+    <h3 style="color: rgb(247, 130, 35);">{{ msg }}</h3>
+    <h2 style="color: rgb(148, 11, 202); font-family:Verdana, Geneva, Tahoma, sans-serif;">© PiYUSH</h2>
+
 </body>
 </html>

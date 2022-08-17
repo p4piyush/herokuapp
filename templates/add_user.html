@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Piyush HomePage</title>
-    <style>
-        body {
-          background-image: url('https://p4piyush.herokuapp.com/static/bg1.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;  
-          background-size: cover;
+
+
+        <style>
+                body {
+                background-image: url('https://p4piyush.herokuapp.com/static/bg1.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+                }
+
+                h1 {
+                    text-align: center;
+                    }
+
+                a:link, a:visited {
+                                    background-color: #f44336;
+                                    color: white;
+                                    padding: 14px 25px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    }
+
+        a:hover, a:active {
+                            background-color: rgb(98, 0, 255);
         }
-
-        h1 {
-            text-align: center;
-            }
-
-        a:link, a:visited {
-                            background-color: #f44336;
-                            color: white;
-                            padding: 14px 25px;
-                            text-align: center;
-                            text-decoration: none;
-                            display: inline-block;
-                            }
-
-a:hover, a:active {
-                    background-color: rgb(98, 0, 255);
-}
-p:hover, p:active{
-    background-color: #2614ee;
-}
-p{
-    color: greenyellow;
-}
-input{
-    color: rgb(21, 21, 21);
-}
+        p:hover, p:active{
+            background-color: #2614ee;
+        }
+        p{
+            color: #f44336;
+        }
+        input{
+            color: rgb(21, 21, 21);
+            padding: 6px 50px;
+            font-size: larger;
+            color: #2614ee; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         </style>
+
 </head>
+
+
 <body style="background-color: rgb(226, 226, 226);">
     
     
@@ -48,18 +57,17 @@ input{
         <a href="https://p4piyush.herokuapp.com/show_users" target="_self">SHOW-USERS</a>
         <a href="https://p4piyush.herokuapp.com/admin" target="_self">ADMIN</a></br>
     </div >
+
         <form action="/save_user/" method="POST" >
             {% csrf_token %}
-        <p style="display: inline;">Enter Your Name:</p> <input type="text" name="name" id="name">
-        </br>
-        <input type="submit" value="Submit">
-    </form>
+            <p style="display: inline; font-size: larger;">Enter Your Name:</p> <input type="text" name="name" id="name" >
+            </br></br>
+            <input type="submit" value="Submit" style="padding: 6px 10px;">
+        </form>
+
     <h3 style="color: rgb(247, 130, 35);">{{ msg }}</h3>
 
-    <div>
-
-
-    </div>
-<h2 style="color: rgb(255, 250, 106);">©Piyush</h2>
+   
+    <h2 style="color: rgb(148, 11, 202); font-family:Verdana, Geneva, Tahoma, sans-serif;">© PiYUSH</h2>
 
 </body>
