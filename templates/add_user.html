@@ -50,14 +50,18 @@
 <body style="background-color: rgb(226, 226, 226);">
     
     
-    <center><h1 style="color: #f44336; fill: aqua;">Please Enter your details</h1></center>    
+    <h1 style="color: #f44336; fill: aqua; align-content: center;">REGISTRATION</h1>   
     
     <div style="display: inline;">
         <a href="https://p4piyush.herokuapp.com/" target="_self">HOME</a>
         <a href="https://p4piyush.herokuapp.com/show_users" target="_self">SHOW-USERS</a>
         <a href="https://p4piyush.herokuapp.com/admin" target="_self">ADMIN</a></br>
     </div >
+    </br>    
+    </br>    
+    </br>    
 
+        <h2 style="color: rgb(247, 130, 35);">Please Enter your details</h2>
         <form action="/save_user/" method="POST" >
             {% csrf_token %}
             <p style="display: inline; font-size: larger;">Enter Your Name:</p> <input type="text" name="name" id="name" >
