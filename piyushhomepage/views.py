@@ -73,7 +73,7 @@ def send_email(req):
                 subject = 'welcome to my Website (c)PiYUSH'
                 message = 'Hi, thank you for registering in geeksforgeeks.'
                 email_from = settings.EMAIL_HOST_USER
-                recipient_list = [eml.email, ]
+                recipient_list = [eml]
                 send_mail( subject, message, email_from, recipient_list )
                 msg='Email Sent... Please check you inbox..'
                 return render(req,template_name='send_email.html', context={"msg":msg})
