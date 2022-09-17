@@ -76,10 +76,11 @@ def send_email(req):
                 recipient_list = [eml.email, ]
                 send_mail( subject, message, email_from, recipient_list )
                 msg='Email Sent... Please check you inbox..'
-                return render(req,template_name='add_user.html', context={"msg":msg})
+                return render(req,template_name='send_email.html', context={"msg":msg})
             else:
                 msg="Please Enter Vaild email"
                 return render(req,template_name='send_email.html', context={"errormsg":msg})
+        return render(req,template_name='send_email.html', context={"msg":msg})
     except:
         msg="server side error..."
         return render(req,template_name='send_email.html', context={"msg":msg})
