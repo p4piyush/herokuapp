@@ -23,4 +23,5 @@ urlpatterns = [
     path('save_user/',save_user_info),
     path('show_users/',show_users),
     path('show_image/',show_image),
+    path('send_email/',send_email),
 ]

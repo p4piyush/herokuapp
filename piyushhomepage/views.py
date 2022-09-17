@@ -57,3 +57,30 @@ def show_users(req):
 def show_image(req): 
     msg=''
     return render(req,template_name='showimage.html')
+
+
+#FOR TRIAL OF SEINDING EMAIL
+from django.conf import settings
+from django.core.mail import send_mail
+
+def send_email(req):
+    eml=""
+    try:
+        if req.method=="POST":
+            formdata=req.POST
+            if formdata:
+                eml=formdata.get('emailid')
+                subject = 'welcome to my Website (c)PiYUSH'
+                message = 'Hi, thank you for registering in geeksforgeeks.'
+                email_from = settings.EMAIL_HOST_USER
+                recipient_list = [eml.email, ]
+                send_mail( subject, message, email_from, recipient_list )
+                msg='Email Sent... Please check you inbox..'
+                return render(req,template_name='add_user.html', context={"msg":msg})
+            else:
+                msg="Please Enter Vaild email"
+                return render(req,template_name='send_email.html', context={"errormsg":msg})
+    except:
+        msg="server side error..."
+        return render(req,template_name='send_email.html', context={"msg":msg})
+
